@@ -1,12 +1,12 @@
 set number					" add line numbers
-set relativenumber
+set relativenumber          " add relativenumber
 set autoindent
 set tabstop=4
 set shiftwidth=4
 set smarttab
 set softtabstop=4
-set mouse=a
-set termguicolors
+set mouse=a                 " mouse support
+set termguicolors           " enable it for onedark theme to work
 set cc=80                   " set an 80 column border for good coding style
 set nocompatible            " disable compatibility to old-time vi
 set ttyfast                 " Speed up scrolling in Vim
@@ -32,17 +32,17 @@ call plug#end()
 " ===== end Plugin ======
 
 let g:airline_powerline_fonts = 1
-let g:NERDTreeDirArrowExpandable="+"
+let g:NERDTreeDirArrowExpandable="+"        "fix display issue for NerdTree
 let g:NERDTreeDirArrowCollapsible="~"
 let g:airline_theme='onedark'
 let g:onedark_termcolors=256
 " ==== colorschemes ====
 colorscheme onedark	
 " ==== end colorschemes ====
-map <F5> :NERDTreeToggle<CR>
-nmap <F8> :TagbarToggle<CR>
+map <F5> :NERDTreeToggle<CR>                " F5 to toggle NerdTree
+nmap <F8> :TagbarToggle<CR>                 " F8 to toggle Tagbar       
 nnoremap <leader>n :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
-inoremap <expr> <Tab> pumvisible() ? coc#_select_confirm() : "<Tab>"
+inoremap <expr> <Tab> pumvisible() ? coc#_select_confirm() : "<Tab>" " tab to apply completion

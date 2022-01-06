@@ -72,6 +72,7 @@ ZSH_THEME="agnoster"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git sudo zsh-autosuggestions zsh-syntax-highlighting command-not-found)
 
+# bind ctrl-space to accept the autocompletion
 bindkey '^ ' autosuggest-accept
 
 source $ZSH/oh-my-zsh.sh
@@ -101,6 +102,8 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# hide default user name
 export DEFAULT_USER="$(whoami)"
 
 # mujoco 210

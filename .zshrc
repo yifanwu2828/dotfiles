@@ -72,7 +72,6 @@ ZSH_THEME="agnoster"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git sudo zsh-autosuggestions zsh-syntax-highlighting command-not-found)
 
-# bind ctrl-space to accept the autocompletion
 bindkey '^ ' autosuggest-accept
 
 source $ZSH/oh-my-zsh.sh
@@ -102,11 +101,14 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-# hide default user name
 export DEFAULT_USER="$(whoami)"
 
-# mujoco 210
+# use lsd instead of ls
+# alias ls='lsd'
+
+# mujoco 200
+#export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/yiw084/.mujoco/mujoco200/bin
 export LD_LIBRARY_PATH=:/home/yiw084/.mujoco/mujoco210/bin
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/nvidia
 export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libGLEW.so
+

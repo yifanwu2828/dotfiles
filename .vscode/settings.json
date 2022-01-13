@@ -1,9 +1,142 @@
 {
-    "editor.codeLensFontFamily": "'Fira Code'",
-    "editor.fontFamily": "'Fira Code', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    // autosave
+    "files.autoSave": "afterDelay",
+   
+    // supress depreciation bracket pair
+    "bracket-pair-colorizer-2.depreciation-notice": false,
 
-    "vim.easymotion": true,
-    "vim.incsearch": true,
+    // supress kite notification
+    "kite.showWelcomeNotificationOnStartup": false,
+
+    // others
+    "redhat.telemetry.enabled": false,
+    "python.testing.pytestEnabled": true,
+    "diffEditor.ignoreTrimWhitespace": false,
+
+
+    // watch files
+    "files.exclude": {
+        "**/__pycache__": true,
+        "**/.pytest_cache": true
+    },
+    "files.watcherExclude": {
+        "**.egg": true,
+        "**.egg-info/**": true,
+        "**.eggs/**": true,
+        "**/.pytype/**": true,
+        "**/.venv/**": true,
+        "**eggs/** ": true,
+        "**runs/**": true
+    },
+
+    // jupyter notebook
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
+    "jupyter.askForKernelRestart": false,
+
+
+    // git 
+    "git.autofetch": true,
+    "git.enableSmartCommit": true,
+    
+    // -----------------------------------------------------------------------------------------------------------
+    // editor
+    "editor.inlineSuggest.enabled": true,
+    "editor.rulers": [100],         
+    "editor.fontLigatures": true,
+    "editor.minimap.enabled": false,
+
+    // editor font
+    "editor.codeLensFontFamily": "Fira Code, monospace, Powerline",
+    "editor.fontFamily": "Fira Code, 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    
+    // terminal
+    "terminal.integrated.fontFamily": "Fira Code, hack, Powerline, monospace",
+    "terminal.integrated.defaultProfile.linux": "zsh",  // terminal shell
+
+    
+    // workbench customizations
+    "window.titleBarStyle": "custom",
+    "keyboard.dispatch": "keyCode",
+    "workbench.sideBar.location": "right",
+    "workbench.editorAssociations": {"*.ipynb": "jupyter-notebook"},
+
+
+    // themes
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.colorTheme": "Atom One Dark",
+    
+    // terminal themes
+    "workbench.colorCustomizations": {
+        "terminal.background": "#1D1F21",
+        "terminal.foreground": "#C5C8C6",
+        "terminalCursor.background": "#C5C8C6",
+        "terminalCursor.foreground": "#C5C8C6",
+        "terminal.ansiBlack": "#1D1F21",
+        "terminal.ansiBlue": "#3971ED",
+        "terminal.ansiBrightBlack": "#969896",
+        "terminal.ansiBrightBlue": "#3971ED",
+        "terminal.ansiBrightCyan": "#3971ED",
+        "terminal.ansiBrightGreen": "#198844",
+        "terminal.ansiBrightMagenta": "#A36AC7",
+        "terminal.ansiBrightRed": "#CC342B",
+        "terminal.ansiBrightWhite": "#FFFFFF",
+        "terminal.ansiBrightYellow": "#FBA922",
+        "terminal.ansiCyan": "#3971ED",
+        "terminal.ansiGreen": "#198844",
+        "terminal.ansiMagenta": "#A36AC7",
+        "terminal.ansiRed": "#CC342B",
+        "terminal.ansiWhite": "#C5C8C6",
+        "terminal.ansiYellow": "#FBA922",
+    },
+    // -----------------------------------------------------------------------------------------------------------
+
+    // github copilot auto-completion
+    "github.copilot.enable": {
+        "*": true,
+        "yaml": true,
+        "plaintext": true,
+        "markdown": true
+    },
+    
+    // remote SSH
+    "remote.SSH.remoteServerListenOnSocket": true,
+    "remote.SSH.remotePlatform": {
+        "popos": "linux",
+        "erl": "linux"
+    },
+
+    //  clang-format
+    "clang-format.executable": "/usr/bin/clang-format-13",
+    "clang-format.style": "google",
+    "[cpp]": {
+        "editor.defaultFormatter": "xaver.clang-format"
+    },
+    "editor.suggest.showStatusBar": true,
+
+    // code runner
+    "code-runner.executorMap":{
+        "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "cpp": "cd $dir && g++ -g -std=c++17 -O2 -pedantic -Wall -Wextra -Wsign-conversion $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "python": "$pythonPath $fullFileName",
+    },
+    "code-runner.clearPreviousOutput": true,
+    "code-runner.showExecutionMessage": false,
+    "code-runner.runInTerminal": true,
+
+    // Vim
     "vim.useSystemClipboard": true,
-    "vim.hlsearch": true,
+    "vim.highlightedyank.enable": true,
+    "vim.history": 100,
+    "vim.useCtrlKeys": false,
+    "vim.enableNeovim": true,   // neovim integration
+
+    // NeoVim
+    "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
+    "vscode-neovim.neovimInitVimPaths.linux": "~/.config/nvim/init.vim",
+    "vscode-neovim.useCtrlKeysForNormalMode": false,
+    "vscode-neovim.useCtrlKeysForInsertMode": false,
+
 }
